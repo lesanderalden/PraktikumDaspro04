@@ -6,11 +6,12 @@ public class StudiKasus204 {
         Scanner alden = new Scanner(System.in);
         String namaMahasiswa, jenisKegiatan;
         String pesan = "";
+        int pendanaanPKM = 0;
         int jumlahDokumen, peringkatJuara, kurangDokumen;
 
         System.out.print("Nama mahasiswa : ");
         namaMahasiswa = alden.nextLine();
-        System.out.print("Jenis kegiatan (BELMAWA/BAKORMA/MANDIRI) : ");
+        System.out.print("Jenis kegiatan (BELMAWA/BAKORMA/MANDIRI/PKM/LAINNYA) : ");
         jenisKegiatan = alden.nextLine();
         System.out.print("Jumlah dokumen : ");
         jumlahDokumen = alden.nextInt();
@@ -34,8 +35,19 @@ public class StudiKasus204 {
                 } else {
                     pesan = "Masukan jumlah dokumen tidak valid.";
                 }
+        } else if (jenisKegiatan.equalsIgnoreCase("pkm")||
+                jenisKegiatan.equalsIgnoreCase("Program Kreativitas Mahasiswa")) {
+            System.out.print("Status Pendanaan PKM (1/0) : ");
+            pendanaanPKM = alden.nextInt();
+            if (pendanaanPKM == 1) {
+                pesan = "Pendanaan diberikan.";
+            } else if (pendanaanPKM == 0) {
+                pesan = "Pendanaan tidak diberikan.";
+            } else {
+                pesan = "Kode pendanaan PKM tidak valid";
+            }
         } else {
-            pesan = "Jenis Kegiatan tidak valid";
+            pesan = "Tidak mendapat penandaan";
         }
         System.out.println("Status mahasiswa "+namaMahasiswa+" : "+pesan);
         alden.close();
