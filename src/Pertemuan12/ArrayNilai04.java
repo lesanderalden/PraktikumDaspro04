@@ -14,7 +14,8 @@ public class ArrayNilai04 {
         
         for (int i = 0; i < nilaiAkhir.length; i++) {
             String status = (nilaiAkhir[i] > 70) ? "LULUS" : "TIDAK LULUS";
-            System.out.println("Mahasiswa ke-" + (i + 1) + ": " + nilaiAkhir[i] + " (" +status+ ")");
+            if (status == "LULUS")
+                System.out.println("Mahasiswa ke-" + (i + 1) + ": " + nilaiAkhir[i] + " (" +status+ ")");
         }
         alden.close();
     }
