@@ -4,7 +4,11 @@ import java.util.Scanner;
 public class ArrayRataNilai04 {
     public static void main(String[] args) {
         Scanner alden = new Scanner(System.in);
-        int[] nilaiMhs = new int[10];
+
+        System.out.print("Masukkan jumlah mahasiswa: ");
+        int jumlahMhs = alden.nextInt();
+
+        int[] nilaiMhs = new int[jumlahMhs];
         int total = 0;
         int lulus = 0;
         String predikat;
