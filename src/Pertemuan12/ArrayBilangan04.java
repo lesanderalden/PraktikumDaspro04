@@ -7,7 +7,7 @@ public class ArrayBilangan04 {
         int[] bil = {4, 4+8, -(1+(4%7)), 20+(4%15)};
 
         for (int i = 0; i < bil.length; i++) {
-            System.out.println("bil["+i+"] = "+bil[i]);
+            System.out.println("bil[" + i + "] = " + bil[i] + ", double = " + (bil[i] * 2));
         }
 
         for (int nilai : bil) {
