@@ -4,11 +4,7 @@ import java.util.Arrays;
 
 public class ArrayBilangan04 {
     public static void main(String[] args) {
-        int[] bil = new int[4];
-        bil[0] = 4;
-        bil[1] = 4+8;
-        bil[2] = -(1+(4%7));
-        bil[3] = 20+(4%15);
+        int[] bil = {4, 4+8, -(1+(4%7)), 20+(4%15)};
 
         for (int i = 0; i < bil.length; i++) {
             System.out.println("bil["+i+"] = "+bil[i]);
