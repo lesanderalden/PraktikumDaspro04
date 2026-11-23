@@ -6,6 +6,7 @@ public class ArrayRataNilai04 {
         Scanner alden = new Scanner(System.in);
         int[] nilaiMhs = new int[10];
         int total = 0;
+        int lulus = 0;
         String predikat;
         double rata2;
 
@@ -13,6 +14,9 @@ public class ArrayRataNilai04 {
             System.out.print("Masukkan nilai mahasiswa ke-" + (i + 1) + ": ");
             nilaiMhs[i] = alden.nextInt();
             total += nilaiMhs[i];
+            if (nilaiMhs[i] > 70) {
+                lulus++;
+            }
         }
         rata2 = (double) total / nilaiMhs.length;
         System.out.println("Total nilai: "+total);
@@ -34,6 +38,7 @@ public class ArrayRataNilai04 {
             predikat = "PERLU PENDAMPINGAN";
         }
 
+        System.out.println("Mahasiswa Lulus: "+lulus);
         System.out.println("Nilai tertinggi: " + tertinggi);
         System.out.println("Nilai terendah: " + terendah);
         System.out.println("Predikat kelas: "+predikat);
