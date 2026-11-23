@@ -1,4 +1,4 @@
-package Pertemuan12;
+package Pertemuan11;
 import java.util.Scanner;
 
 public class NilaiMhs_04 {
